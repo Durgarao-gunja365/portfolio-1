@@ -1,0 +1,9 @@
+[33mbb33ff57[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m HEAD@{0}: commit: Force add ignored files
+[33m99e3ce26[m HEAD@{1}: rebase (finish): returning to refs/heads/master
+[33m99e3ce26[m HEAD@{2}: rebase (continue): Initial commit ok
+[33m6c5d5ffc[m HEAD@{3}: rebase (start): checkout 6c5d5ffc39b3191e6776f97c5e50274ea48439a0
+[33me7058c30[m HEAD@{4}: reset: moving to HEAD
+[33me7058c30[m HEAD@{5}: reset: moving to HEAD
+[33me7058c30[m HEAD@{6}: commit: Initial commit
+[33mf5ac16ca[m HEAD@{7}: commit: Initial commit
+[33ma134f0ee[m HEAD@{8}: commit (initial): Initial commit
