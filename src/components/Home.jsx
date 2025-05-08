@@ -86,18 +86,23 @@ const Hero = () => {
             </motion.p>
             
             <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 1, duration: 0.8 }}
-              className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
-            >
-              <button className="px-8 py-3.5 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-medium rounded-lg hover:shadow-lg hover:shadow-indigo-500/30 transition-all duration-300 transform hover:-translate-y-1">
-                View My Work
-              </button>
-              <button className="px-8 py-3.5 border-2 border-indigo-500 text-indigo-400 font-medium rounded-lg hover:bg-indigo-500/10 transition-all duration-300">
-                Contact Me
-              </button>
-            </motion.div>
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+  transition={{ delay: 1, duration: 0.8 }}
+  className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
+>
+  <a href="#projects">
+    <button className="px-8 py-3.5 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-medium rounded-lg hover:shadow-lg hover:shadow-indigo-500/30 transition-all duration-300 transform hover:-translate-y-1">
+      View My Work
+    </button>
+  </a>
+  <a href="#contact">
+    <button className="px-8 py-3.5 border-2 border-indigo-500 text-indigo-400 font-medium rounded-lg hover:bg-indigo-500/10 transition-all duration-300">
+      Contact Me
+    </button>
+  </a>
+</motion.div>
+
           </motion.div>
 
           {/* 3D profile card */}

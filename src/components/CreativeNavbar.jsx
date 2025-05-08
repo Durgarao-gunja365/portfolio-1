@@ -20,7 +20,7 @@ const CreativeNavbar = () => {
         <div className="flex justify-between items-center">
           {/* 3D Logo */}
           <div className="relative">
-            <div className="logo-3d relative px-3 py-0 bg-indigo-600 text-white font-bold text-xl rounded cursor-pointer transform-style-preserve-3d transition-all duration-500 hover:rotate-y-5">
+            <div className="logo-3d relative px-3 py-2 bg-indigo-600 text-white font-bold text-xl rounded cursor-pointer transform-style-preserve-3d transition-all duration-500 hover:rotate-y-5">
               Gunja Durgarao
               <div className="absolute -bottom-2 -right-2 w-4 h-4 bg-purple-500 rounded-full animate-float" style={{ animationDelay: '0s' }}></div>
               <div className="absolute -top-2 -left-2 w-3 h-3 bg-pink-500 rounded-full animate-float" style={{ animationDelay: '0.5s' }}></div>
@@ -30,7 +30,7 @@ const CreativeNavbar = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
-            {['Home', 'About', 'Skills','Projects', 'Certifications', 'Education&WorkExperience','Github-Stats', 'Contact'].map((item) => (
+            {['Home', 'About', 'Skills','Projects', 'Certifications', 'Education&WorkExperience','Github-Stats'].map((item) => (
               <a
                 key={item}
                 href={`#${item.toLowerCase()}`}
@@ -45,7 +45,7 @@ const CreativeNavbar = () => {
             {/* "Hire Me" Button - Desktop */}
             <a
               href="#contact"
-              className="relative px-6 py-1 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-medium rounded-lg overflow-hidden group transform transition-transform duration-300 hover:-translate-y-1"
+              className="relative px-2 py-2 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-medium rounded-lg overflow-hidden group transform transition-transform duration-300 hover:-translate-y-1"
             >
               <span className="relative z-10">Hire Me</span>
               <span className="absolute inset-0 bg-gradient-to-r from-purple-600 to-indigo-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
@@ -76,7 +76,7 @@ const CreativeNavbar = () => {
         {/* Mobile Menu */}
         <div className={`lg:hidden transition-all duration-500 ease-in-out ${isMenuOpen ? 'py-4 max-h-screen' : 'py-0 max-h-0 overflow-hidden'}`}>
           <div className="flex flex-col space-y-4 mt-4 px-2 overflow-y-auto max-h-[80vh]">
-            {['Home', 'About', 'Skills', 'Projects', 'Certifications', 'Education&WorkExperience', 'Github-Stats', 'Contact'].map((item) => (
+            {['Home', 'About', 'Skills', 'Projects', 'Certifications', 'Education&WorkExperience', 'Github-Stats'].map((item) => (
               <a
                 key={item}
                 href={`#${item.toLowerCase()}`}
