@@ -173,10 +173,10 @@ const ContactSection = () => {
               <div>
                 <h3 className="text-xl font-semibold mb-2">Email</h3>
                 <a 
-                  href="mailto:your.email@example.com" 
+                  href="mailto:durgaraogunja02@gmail.com" 
                   className="text-gray-400 hover:text-indigo-400 transition-colors"
                 >
-                  your.email@example.com
+                  durgaraogunja02@gmail.com
                 </a>
               </div>
             </motion.div>
@@ -194,12 +194,13 @@ const ContactSection = () => {
               </motion.div>
               <div>
                 <h3 className="text-xl font-semibold mb-2">Phone</h3>
-                <a 
-                  href="tel:+1234567890" 
-                  className="text-gray-400 hover:text-purple-400 transition-colors"
-                >
-                  +1 (234) 567-890
-                </a>
+               <a 
+  href="tel:+91 7601071268" 
+  className="text-gray-400 hover:text-purple-400 transition-colors"
+  aria-label="Call me at +91 7601071268"
+>
+  +91 7601071268
+</a>
               </div>
             </motion.div>
 
@@ -216,7 +217,10 @@ const ContactSection = () => {
               </motion.div>
               <div>
                 <h3 className="text-xl font-semibold mb-2">Location</h3>
-                <p className="text-gray-400">San Francisco, CA</p>
+                <p className="text-gray-400">
+  Dachepalli, Guntur - 522414<br />
+  Andhra Pradesh, India
+</p>
               </div>
             </motion.div>
 
@@ -228,9 +232,9 @@ const ContactSection = () => {
               <h3 className="text-xl font-semibold mb-4">Connect With Me</h3>
               <div className="flex gap-4">
                 {[ 
-                  { icon: <FaLinkedin />, url: "#", color: "text-blue-400 hover:text-blue-500" },
-                  { icon: <FaGithub />, url: "#", color: "text-gray-400 hover:text-white" },
-                  { icon: <FaTwitter />, url: "#", color: "text-sky-400 hover:text-sky-500" }
+                  { icon: <FaLinkedin />, url: "https://www.linkedin.com/in/durgaraogunja365/", color: "text-blue-400 hover:text-blue-500" },
+                  { icon: <FaGithub />, url: "https://github.com/Durgarao-gunja365", color: "text-gray-400 hover:text-white" },
+                  { icon: <FaTwitter />, url: "https://x.com/GunjaDurgarao", color: "text-sky-400 hover:text-sky-500" }
                 ].map((social, index) => (
                   <motion.a
                     key={index}

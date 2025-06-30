@@ -9,7 +9,7 @@ const SkillsSection = () => {
       icon: <FaReact className="text-indigo-400" />,
       skills: [
         { name: "React", icon: <FaReact className="text-blue-400" />, level: 95 },
-        { name: "TypeScript", icon: <SiTypescript className="text-blue-600" />, level: 90 },
+        { name: "JavaScript", icon: <FaNodeJs className="text-blue-600" />, level: 90 },
         { name: "Tailwind CSS", icon: <SiTailwindcss className="text-cyan-400" />, level: 85 },
       ]
     },
@@ -17,9 +17,9 @@ const SkillsSection = () => {
       title: "Backend",
       icon: <FaNodeJs className="text-green-400" />,
       skills: [
-        { name: "Node.js", icon: <FaNodeJs className="text-green-500" />, level: 90 },
-        { name: "GraphQL", icon: <SiGraphql className="text-pink-500" />, level: 85 },
-        { name: "Python", icon: <SiPython className="text-yellow-400" />, level: 80 },
+        { name: "Django", icon: <FaNodeJs className="text-green-500" />, level: 90 },
+        { name: "SpringBoot", icon: <SiGraphql className="text-pink-500" />, level: 85 },
+        { name: "PYthon", icon: <SiPython className="text-yellow-400" />, level: 80 },
       ]
     },
     {
@@ -28,7 +28,6 @@ const SkillsSection = () => {
       skills: [
         { name: "Database", icon: <FaDatabase className="text-red-400" />, level: 85 },
         { name: "Docker", icon: <SiDocker className="text-blue-400" />, level: 80 },
-        { name: "Mobile", icon: <FaMobile className="text-indigo-300" />, level: 75 },
       ]
     }
   ];
@@ -121,7 +120,7 @@ const SkillsSection = () => {
             Other Technologies I Work With
           </h3>
           <div className="flex flex-wrap justify-center gap-4">
-            {['JavaScript', 'HTML5', 'CSS3', 'Redux', 'Next.js', 'Express', 'MongoDB', 'PostgreSQL', 'Git', 'AWS', 'Firebase', 'Jest'].map((tech, index) => (
+            {['JavaScript', 'HTML5', 'CSS3', 'Redux', 'Next.js', 'Express', 'MongoDB', 'PostgreSQL', 'Git', 'AWS'].map((tech, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}

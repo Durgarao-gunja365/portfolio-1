@@ -1,38 +1,81 @@
 import { motion } from 'framer-motion';
 import { FiGithub, FiExternalLink } from 'react-icons/fi';
-import { FaReact, FaNodeJs, FaPython } from 'react-icons/fa';
-import { SiTypescript, SiTailwindcss, SiFirebase } from 'react-icons/si';
+import { FaReact, FaNodeJs, FaPython, FaJava } from 'react-icons/fa';
+import { SiDjango, SiSpring, SiDocker, SiJenkins, SiGrafana, SiPrometheus, SiMysql,SiVite, SiTailwindcss } from 'react-icons/si';
+import { useState } from 'react';
 
 const ProjectsSection = () => {
-  const projects = [
+  const initialProjects = [
     {
-      title: "E-Commerce Platform",
-      description: "A full-featured online store with cart functionality, user authentication, and payment processing.",
-      tags: ["React", "Node.js", "MongoDB", "Stripe"],
-      icons: [<FaReact />, <FaNodeJs />],
+      title: "Student Course Management System",
+      description: "A web-based platform for student-faculty enrollment, course management, and communication with role-based dashboards.",
+      tags: ["Django", "Python", "JavaScript", "Postgres"],
+      icons: [<SiDjango />, <FaPython />],
       github: "#",
       live: "#",
-      image: "/placeholder-project1.jpg"
+      image: "/education-system.jpg"
     },
     {
-      title: "Task Management App",
-      description: "Productivity application with drag-and-drop interface, real-time updates, and team collaboration features.",
-      tags: ["TypeScript", "Firebase", "Tailwind CSS"],
-      icons: [<SiTypescript />, <SiFirebase />, <SiTailwindcss />],
+      title: "Smart City Services Platform",
+      description: "Digital governance solution bridging citizens and municipal authorities through automated service request management.",
+      tags: ["Spring Boot", "Java", "JSP", "MySQL"],
+      icons: [<SiSpring />, <FaJava />, <SiMysql />],
       github: "#",
       live: "#",
-      image: "/placeholder-project2.jpg"
+      image: "/smart-city.jpg"
     },
     {
-      title: "Data Visualization Dashboard",
-      description: "Interactive dashboard displaying complex data sets with customizable charts and filtering options.",
-      tags: ["Python", "React", "D3.js"],
-      icons: [<FaPython />, <FaReact />],
+      title: "DevOps Implementation for Django App",
+      description: "End-to-end DevOps implementation with CI/CD pipeline and monitoring for a Django application.",
+      tags: ["Docker", "Jenkins", "Prometheus", "Grafana"],
+      icons: [<SiDocker />, <SiJenkins />, <SiPrometheus />, <SiGrafana />],
       github: "#",
       live: "#",
-      image: "/placeholder-project3.jpg"
+      image: "/devops.jpg"
     }
   ];
+
+  const additionalProjects = [
+    {
+      title: "Premium Rice E-Commerce",
+      description: "Online store specializing in premium rice varieties with cart functionality and payment processing.",
+     tags: ["React (Vite)", "Tailwind CSS", "Context API"],
+      icons: [<FaReact />, <SiVite />, <SiTailwindcss />],
+      github: "#",
+      live: "#",
+      image: "/rice-shop.jpg"
+    },
+    {
+      title: "Luxury Car Rental",
+      description: "Platform for renting luxury vehicles with advanced search filters and booking system.",
+      tags: ["React (Vite)", "Tailwind CSS", "React Router"],
+      icons: [<FaReact />, <SiVite />, <SiTailwindcss />],
+      github: "#",
+      live: "#",
+      image: "/car-rental.jpg"
+    },
+    {
+      title: "Fashion E-Commerce",
+      description: "Full-featured online clothing store with user authentication and recommendation system.",
+     tags: ["React (Vite)", "Tailwind CSS", "React Router"],
+      icons: [<FaReact />, <SiVite />, <SiTailwindcss />],
+      github: "#",
+      live: "#",
+      image: "/fashion-store.jpg"
+    }
+  ];
+
+  const [showAllProjects, setShowAllProjects] = useState(false);
+  const [projects, setProjects] = useState(initialProjects);
+
+  const handleViewAllProjects = () => {
+    if (!showAllProjects) {
+      setProjects([...initialProjects, ...additionalProjects]);
+    } else {
+      setProjects(initialProjects);
+    }
+    setShowAllProjects(!showAllProjects);
+  };
 
   return (
     <section id="projects" className="py-20 bg-gray-900 relative overflow-hidden">
@@ -58,7 +101,7 @@ const ProjectsSection = () => {
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-indigo-500 to-purple-500 mx-auto mb-6"></div>
           <p className="text-lg text-gray-400 max-w-3xl mx-auto">
-            Some of my recent work and contributions
+            A showcase of my full-stack development projects across various domains
           </p>
         </motion.div>
 
@@ -75,7 +118,7 @@ const ProjectsSection = () => {
             >
               {/* Project image */}
               <div className="h-60 bg-gradient-to-br from-indigo-900/50 to-purple-900/50 flex items-center justify-center">
-                <span className="text-gray-400 text-lg">Project Screenshot</span>
+                <span className="text-gray-400 text-lg">{project.title} Image</span>
               </div>
 
               {/* Project content */}
@@ -140,10 +183,13 @@ const ProjectsSection = () => {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="text-center mt-16"
         >
-          <button className="px-8 py-3.5 border-2 border-indigo-500 text-indigo-400 font-medium rounded-lg hover:bg-indigo-500/10 transition-all duration-300 flex items-center gap-2 mx-auto group">
-            View All Projects
+          <button 
+            onClick={handleViewAllProjects}
+            className="px-8 py-3.5 border-2 border-indigo-500 text-indigo-400 font-medium rounded-lg hover:bg-indigo-500/10 transition-all duration-300 flex items-center gap-2 mx-auto group"
+          >
+            {showAllProjects ? 'Show Less Projects' : 'View All Projects'}
             <span className="group-hover:translate-x-1 transition-transform duration-300">
-              &rarr;
+              {showAllProjects ? '←' : '→'}
             </span>
           </button>
         </motion.div>

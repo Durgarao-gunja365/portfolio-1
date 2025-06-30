@@ -1,39 +1,40 @@
 import { motion } from 'framer-motion';
-import { FaCertificate, FaAward, FaUniversity } from 'react-icons/fa';
+import { FaCertificate, FaAward, FaUniversity, FaRegClock } from 'react-icons/fa';
 
 const CertificationsSection = () => {
   const certifications = [
     {
-      title: "Advanced React Developer",
-      issuer: "Meta",
-      date: "June 2023",
-      credential: "Credential ID: XYZ12345",
-      icon: <FaCertificate className="text-blue-500" />,
-      link: "#"
+      title: "AWS Certified Cloud Practitioner",
+      issuer: "Amazon Web Services",
+      date: "May 2024",
+      credential: "Credential ID: 673a089dd09145d6b7679f1f506b2f62",
+      icon: <FaAward className="text-orange-500" />,
+      link: "https://cp.certmetrics.com/amazon/en/public/verify/credential/673a089dd09145d6b7679f1f506b2f62"
     },
     {
-      title: "Cloud Architecture Professional",
-      issuer: "Google Cloud",
-      date: "March 2023",
-      credential: "Credential ID: GCP78910",
-      icon: <FaAward className="text-green-500" />,
-      link: "#"
+      title: "EX183 Red Hat Certified Enterprise Application Developer",
+      issuer: "Red Hat",
+      date: "Dec 2024",
+      credential: "Credential ID: 240-262-790",
+      icon: <FaCertificate className="text-red-500" />,
+      link: "https://rhtapps.redhat.com/verify?certId=240-262-790"
     },
     {
-      title: "Machine Learning Specialist",
-      issuer: "Stanford University",
-      date: "January 2023",
-      credential: "Credential ID: STAN45678",
-      icon: <FaUniversity className="text-red-500" />,
-      link: "#"
+      title: "Certified AI Associate",
+      issuer: "Artificial Intelligence Board of America",
+      date: "2022",
+      credential: "Credential ID: 5069271",
+      icon: <FaUniversity className="text-blue-500" />,
+      link: "https://drive.google.com/file/d/11VFd6uv9jQqxhUizdxHW_jHHGF-KKKgD/view"
     },
     {
-      title: "Full Stack Web Development",
-      issuer: "freeCodeCamp",
-      date: "November 2022",
-      credential: "Credential ID: FCC24680",
-      icon: <FaCertificate className="text-yellow-500" />,
-      link: "#"
+      title: "ServiceNow Certified System Administrator (In Progress)",
+      issuer: "ServiceNow",
+      date: "Expected july 2025",
+      credential: "Currently pursuing",
+      icon: <FaRegClock className="text-purple-500" />,
+      link: "#",
+      inProgress: true
     }
   ];
 
@@ -82,17 +83,22 @@ const CertificationsSection = () => {
                 className={`relative flex ${index % 2 === 0 ? 'md:justify-start' : 'md:justify-end'}`}
               >
                 {/* Timeline dot */}
-                <div className="hidden md:block absolute left-1/2 top-6 w-4 h-4 -ml-2 bg-indigo-500 rounded-full border-2 border-white z-10"></div>
+                <div className={`hidden md:block absolute left-1/2 top-6 w-4 h-4 -ml-2 ${cert.inProgress ? 'bg-purple-500' : 'bg-indigo-500'} rounded-full border-2 border-white z-10`}></div>
 
                 {/* Certification card */}
-                <div className={`flex-1 bg-gray-800/50 backdrop-blur-sm rounded-xl border border-gray-700 hover:border-indigo-500 transition-all duration-300 p-6 group max-w-2xl ${index % 2 === 0 ? 'md:mr-8' : 'md:ml-8'}`}>
+                <div className={`flex-1 bg-gray-800/50 backdrop-blur-sm rounded-xl border ${cert.inProgress ? 'border-purple-500/50' : 'border-gray-700'} hover:border-indigo-500 transition-all duration-300 p-6 group max-w-2xl ${index % 2 === 0 ? 'md:mr-8' : 'md:ml-8'}`}>
                   <div className="flex items-start gap-4">
-                    <div className="p-3 bg-gray-700 rounded-lg text-2xl group-hover:bg-indigo-500/20 group-hover:text-indigo-400 transition-colors">
+                    <div className={`p-3 ${cert.inProgress ? 'bg-purple-500/20' : 'bg-gray-700'} rounded-lg text-2xl group-hover:bg-indigo-500/20 group-hover:text-indigo-400 transition-colors`}>
                       {cert.icon}
                     </div>
                     <div className="flex-1">
                       <h3 className="text-xl font-bold text-white group-hover:text-indigo-400 transition-colors">
                         {cert.title}
+                        {cert.inProgress && (
+                          <span className="ml-2 text-xs bg-purple-500/20 text-purple-300 px-2 py-1 rounded-full">
+                            In Progress
+                          </span>
+                        )}
                       </h3>
                       <div className="flex flex-wrap items-center gap-2 mt-1 mb-3">
                         <span className="text-sm text-gray-400">{cert.issuer}</span>
@@ -100,17 +106,19 @@ const CertificationsSection = () => {
                         <span className="text-sm text-gray-400">{cert.date}</span>
                       </div>
                       <p className="text-sm text-gray-400 mb-4">{cert.credential}</p>
-                      <a 
-                        href={cert.link} 
-                        className="inline-flex items-center text-indigo-400 hover:text-indigo-300 transition-colors text-sm"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        View Credential
-                        <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                        </svg>
-                      </a>
+                      {!cert.inProgress && (
+                        <a 
+                          href={cert.link} 
+                          className="inline-flex items-center text-indigo-400 hover:text-indigo-300 transition-colors text-sm"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          View Credential
+                          <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                          </svg>
+                        </a>
+                      )}
                     </div>
                   </div>
                 </div>
