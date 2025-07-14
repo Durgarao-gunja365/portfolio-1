@@ -20,21 +20,21 @@ const CertificationsSection = () => {
       link: "https://rhtapps.redhat.com/verify?certId=240-262-790"
     },
     {
-      title: "Certified AI Associate",
-      issuer: "Artificial Intelligence Board of America",
-      date: "2022",
+      title: " Salesforce Certified AI Associate",
+      issuer: "Salesforce",
+      date: "oct 2024",
       credential: "Credential ID: 5069271",
       icon: <FaUniversity className="text-blue-500" />,
       link: "https://drive.google.com/file/d/11VFd6uv9jQqxhUizdxHW_jHHGF-KKKgD/view"
     },
     {
-      title: "ServiceNow Certified System Administrator (In Progress)",
+      title: "ServiceNow Certified System Administrator",
       issuer: "ServiceNow",
-      date: "Expected july 2025",
-      credential: "Currently pursuing",
+      date: " july 2025",
+      credential: "Credential ID: 27289006",
       icon: <FaRegClock className="text-purple-500" />,
-      link: "#",
-      inProgress: true
+      link: "https://drive.google.com/file/d/1C8t1hllnNCTF68iu6IVr0IYgBqCaSCpp/view?usp=sharing",
+      //inProgress: true
     }
   ];
 
