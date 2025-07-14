@@ -6,63 +6,66 @@ import { useState } from 'react';
 
 const ProjectsSection = () => {
   const initialProjects = [
-    {
-      title: "Student Course Management System",
-      description: "A web-based platform for student-faculty enrollment, course management, and communication with role-based dashboards.",
-      tags: ["Django", "Python", "JavaScript", "Postgres"],
-      icons: [<SiDjango />, <FaPython />],
-      github: "#",
-      live: "#",
-      image: "/education-system.jpg"
+     {
+      title: "Fashion E-Commerce",
+      description: "Full-featured online clothing store with user authentication and recommendation system.",
+     tags: ["React (Vite)", "Tailwind CSS", "React Router"],
+      icons: [<FaReact />, <SiVite />, <SiTailwindcss />],
+      github: "https://github.com/Durgarao-gunja365/Ecommerce/tree/master",
+      live: "https://durga-ecommerce.netlify.app/",
+      image: "/fashion-store.jpg"
     },
+     {
+      title: "Premium Rice E-Commerce",
+      description: "Online store specializing in premium rice varieties with cart functionality and payment processing.",
+     tags: ["React (Vite)", "Tailwind CSS", "Context API"],
+      icons: [<FaReact />, <SiVite />, <SiTailwindcss />],
+      github: "https://github.com/Durgarao-gunja365/Rice-Shop/tree/master",
+      live: "https://durga-rice.netlify.app/",
+      image: "/rice-shop.jpg"
+    },
+    
     {
       title: "Smart City Services Platform",
       description: "Digital governance solution bridging citizens and municipal authorities through automated service request management.",
       tags: ["Spring Boot", "Java", "JSP", "MySQL"],
       icons: [<SiSpring />, <FaJava />, <SiMysql />],
-      github: "#",
-      live: "#",
+      github: "https://github.com/Durgarao-gunja365/SmartCityApplication_JFSD/tree/master",
+      
       image: "/smart-city.jpg"
+    },
+    
+     {
+      title: "Luxury Car Rental",
+      description: "Platform for renting luxury vehicles with advanced search filters and booking system.",
+      tags: ["React (Vite)", "Tailwind CSS", "React Router"],
+      icons: [<FaReact />, <SiVite />, <SiTailwindcss />],
+      github: "https://github.com/Durgarao-gunja365/CarRental/tree/master",
+      live: "https://durga-rentalcar.netlify.app/",
+      image: "/car-rental.jpg"
+    },
+   
+  ];
+
+  const additionalProjects = [
+    {
+      title: "Student Course Management System",
+      description: "A web-based platform for student-faculty enrollment, course management, and communication with role-based dashboards.",
+      tags: ["Django", "Python", "JavaScript", "Postgres"],
+      icons: [<SiDjango />, <FaPython />],
+      github: "https://github.com/Durgarao-gunja365/PFSD_Student_course_management_system/tree/master",
+      
+      image: "/education-system.jpg"
     },
     {
       title: "DevOps Implementation for Django App",
       description: "End-to-end DevOps implementation with CI/CD pipeline and monitoring for a Django application.",
       tags: ["Docker", "Jenkins", "Prometheus", "Grafana"],
       icons: [<SiDocker />, <SiJenkins />, <SiPrometheus />, <SiGrafana />],
-      github: "#",
-      live: "#",
+      github: "https://github.com/Durgarao-gunja365/Devops_project",
       image: "/devops.jpg"
-    }
-  ];
-
-  const additionalProjects = [
-    {
-      title: "Premium Rice E-Commerce",
-      description: "Online store specializing in premium rice varieties with cart functionality and payment processing.",
-     tags: ["React (Vite)", "Tailwind CSS", "Context API"],
-      icons: [<FaReact />, <SiVite />, <SiTailwindcss />],
-      github: "#",
-      live: "#",
-      image: "/rice-shop.jpg"
     },
-    {
-      title: "Luxury Car Rental",
-      description: "Platform for renting luxury vehicles with advanced search filters and booking system.",
-      tags: ["React (Vite)", "Tailwind CSS", "React Router"],
-      icons: [<FaReact />, <SiVite />, <SiTailwindcss />],
-      github: "#",
-      live: "#",
-      image: "/car-rental.jpg"
-    },
-    {
-      title: "Fashion E-Commerce",
-      description: "Full-featured online clothing store with user authentication and recommendation system.",
-     tags: ["React (Vite)", "Tailwind CSS", "React Router"],
-      icons: [<FaReact />, <SiVite />, <SiTailwindcss />],
-      github: "#",
-      live: "#",
-      image: "/fashion-store.jpg"
-    }
+    
   ];
 
   const [showAllProjects, setShowAllProjects] = useState(false);

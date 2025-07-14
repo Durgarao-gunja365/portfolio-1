@@ -35,7 +35,7 @@ const About = () => {
   ];
 
   const handleDownloadResume = () => {
-    const resumeUrl = '/2200030365_Durgarao_gunja (2).pdf';
+    const resumeUrl = 'durgarao Resume.pdf';
     const link = document.createElement('a');
     link.href = resumeUrl;
     link.download = 'Durgarao_Gunja_Resume.pdf';
