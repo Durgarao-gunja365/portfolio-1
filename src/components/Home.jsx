@@ -150,7 +150,7 @@ const Hero = () => {
                   <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl overflow-hidden">
                     <div className="h-80 w-full bg-gradient-to-br from-indigo-500/20 to-purple-600/20 flex items-center justify-center overflow-hidden">
                       <img
-                        src="/my_photo-1.jpg"
+                        src="/durga ge.png"
                         alt="Durgarao Gunja"
                         className="h-full w-full object-cover rounded-xl transform transition duration-500 hover:scale-105"
                       />

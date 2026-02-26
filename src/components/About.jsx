@@ -35,7 +35,7 @@ const About = () => {
   ];
 
   const handleDownloadResume = () => {
-    const resumeUrl = 'durgarao Resume.pdf';
+    const resumeUrl = '2200030365_gunja_durgarao_at&t_resume.pdf';
     const link = document.createElement('a');
     link.href = resumeUrl;
     link.download = 'Durgarao_Gunja_Resume.pdf';
@@ -124,7 +124,7 @@ const About = () => {
                 transition={{ delay: 0.5 }}
               >
                 <img
-                  src="/my_photo-1.jpg"
+                  src="/durga ge.png"
                   alt="Durgarao Gunja"
                   className="w-full h-full object-cover"
                 />
